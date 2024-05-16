@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(ProductController.class)
-public class ProductControllerTest {
+class ProductControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -29,12 +29,14 @@ public class ProductControllerTest {
     private ProductService productService;
 
     @Test
-    public void testGetProducts() throws Exception {
+    void testGetProducts() throws Exception {
         Pageable pageable = PageRequest.of(0, 15);
         Page<Product> productPage = new PageImpl<>(Collections.emptyList(), pageable, 0);
         when(productService.getProducts(1, 15)).thenReturn(productPage);
 
-        mockMvc.perform(get("/api/products"))
+        mockMvc.perform(get("/api/products")
+                        .param("page", "1")
+                        .param("size", "15"))
                 .andExpect(status().isOk());
     }
 }
