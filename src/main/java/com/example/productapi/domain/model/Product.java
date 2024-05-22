@@ -1,4 +1,4 @@
-package com.example.productapi.model;
+package com.example.productapi.domain.model;
 
 
 import jakarta.persistence.Entity;

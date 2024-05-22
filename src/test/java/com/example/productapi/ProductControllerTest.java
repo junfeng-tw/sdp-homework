@@ -1,8 +1,8 @@
 package com.example.productapi;
 
-import com.example.productapi.controller.ProductController;
-import com.example.productapi.model.Product;
-import com.example.productapi.service.ProductService;
+import com.example.productapi.adapters.web.ProductController;
+import com.example.productapi.domain.model.Product;
+import com.example.productapi.application.ProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

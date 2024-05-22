@@ -1,7 +1,7 @@
-package com.example.productapi.service;
+package com.example.productapi.application;
 
-import com.example.productapi.model.Product;
-import com.example.productapi.repository.ProductRepository;
+import com.example.productapi.domain.model.Product;
+import com.example.productapi.domain.repository.ProductRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

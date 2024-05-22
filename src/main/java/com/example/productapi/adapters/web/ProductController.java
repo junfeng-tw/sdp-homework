@@ -1,7 +1,7 @@
-package com.example.productapi.controller;
+package com.example.productapi.adapters.web;
 
-import com.example.productapi.model.Product;
-import com.example.productapi.service.ProductService;
+import com.example.productapi.domain.model.Product;
+import com.example.productapi.application.ProductService;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
